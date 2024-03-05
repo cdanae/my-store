@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+
+ export class AppComponent {
   name = 'Danae';
   age = 29;
   image = 'https://source.unsplash.com/random';
@@ -14,5 +15,12 @@ export class AppComponent {
     name: 'Brisa',
     age: 31,
     avatar: 'https://source.unsplash.com/random'
+  }
+
+  toggleBtn() {
+    this.btnDisabled = !this.btnDisabled;
+  }
+  agePlusBtn() {
+    this.person.age += 1;
   }
 }

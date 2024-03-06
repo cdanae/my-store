@@ -1,3 +1,13 @@
+<h1>*ngFor Objects</h1>
+<div>
+  <div *ngFor="let product of products">
+    <img width="100px" [src]="product.img" alt="">
+    <p>{{ product.name }}</p>
+    <p>Price: $ {{ product.price }}</p>
+  </div>
+</div>
+
+<hr>
 <h1>*ngFor</h1>
 <input type="text" [(ngModel)]="newEmoji">
 <button (click)="addEmojiBtn()">Add emoji-food</button>

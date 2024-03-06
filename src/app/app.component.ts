@@ -17,6 +17,9 @@ import { Component } from '@angular/core';
     avatar: 'https://source.unsplash.com/random'
   }
 
+  emojis: string[] = ['🥞', '🧆', '🥮']
+  newEmoji = ''
+
   toggleBtn() {
     this.btnDisabled = !this.btnDisabled;
   }
@@ -29,8 +32,13 @@ import { Component } from '@angular/core';
   }
   changeName(event: Event) {
     const element = event.target as HTMLInputElement;
-    this.person.name = element.value;
-    
-    
+    this.person.name = element.value;    
+  }
+  addEmojiBtn() {
+    this.emojis.push(this.newEmoji);
+    this.newEmoji = ''
+  }
+  deleteEmojiBtn(index: number) {
+    this.emojis.splice(index, 1)
   }
 }

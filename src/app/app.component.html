@@ -1,4 +1,17 @@
-<h1>NgIf</h1>
+<h1>*ngFor</h1>
+<input type="text" [(ngModel)]="newEmoji">
+<button (click)="addEmojiBtn()">Add emoji-food</button>
+<ul>
+  <li *ngIf="emojis.length === 0">Sin emojis</li>
+  <li *ngFor="let emoji of emojis; index as i">
+    {{ i }} {{ emoji }}
+    <button (click)="deleteEmojiBtn(i)">Delete</button>
+  </li>
+  
+</ul>
+
+<hr>
+<h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="person.name">
 <p *ngIf="person.name === 'Izamar'">Soy Izamar</p>
 <p *ngIf="person.name === 'Bricio' && person.age === 31; else elseBlock">Soy Bricio</p>

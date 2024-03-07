@@ -13,9 +13,9 @@
 
 <hr>
 <h1>*ngFor Objects</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img width="100px" [src]="product.img" alt="">
+    <img [src]="product.img" alt="">
     <p>{{ product.name }}</p>
     <p>Price: $ {{ product.price }}</p>
   </div>
@@ -80,4 +80,4 @@
 <h2>{{'Hola Familia '.repeat(5)}}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola, soy {{ name }} y tengo {{ age }} años</h3>
-<img width="300px" src="{{ image }}" alt="random image">
+<img width="100px" src="{{ image }}" alt="random image">

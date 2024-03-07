@@ -1,3 +1,17 @@
+<h1>[ngSwitch] </h1>
+<input type="text" required [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Brisa'">La persona es Brisa</p>
+  <p *ngSwitchCase="'Sophie'">La persona es Sophie</p>
+  <p *ngSwitchCase="'Monica '">La persona es Monica</p>
+  <p *ngSwitchDefault="''">No hay nombres</p>
+</div>
+
+<!-- <p *ngIf="person.name === 'Brisa'">La persona es Brisa</p>
+<p *ngIf="person.name === 'Sophie'">La persona es Sophie</p>
+<p *ngIf="person.name === 'Monica'">La persona es Monica</p> -->
+
+<hr>
 <h1>*ngFor Objects</h1>
 <div>
   <div *ngFor="let product of products">
@@ -17,7 +31,7 @@
     {{ i }} {{ emoji }}
     <button (click)="deleteEmojiBtn(i)">Delete</button>
   </li>
-  
+
 </ul>
 
 <hr>
@@ -25,7 +39,7 @@
 <input type="text" required [(ngModel)]="person.name">
 <p *ngIf="person.name === 'Izamar'">Soy Izamar</p>
 <p *ngIf="person.name === 'Bricio' && person.age === 31; else elseBlock">Soy Bricio</p>
-<ng-template #elseBlock >
+<ng-template #elseBlock>
   <p>Bloque de else</p>
 </ng-template>
 
@@ -44,7 +58,9 @@
 <p>Edad {{ person.age }}</p>
 <button (click)="agePlusBtn()">Age++</button>
 <div class="box" (scroll)="onScroll($event)">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, magni natus! Quaerat cum nesciunt enim, sint, architecto quisquam minus illo accusamus pariatur temporibus, aspernatur id officiis! Dolores ipsa aliquam provident.</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, magni natus! Quaerat cum nesciunt enim, sint,
+    architecto quisquam minus illo accusamus pariatur temporibus, aspernatur id officiis! Dolores ipsa aliquam
+    provident.</p>
 </div>
 <input type="text" [value]="person.name" (keyup)="changeName($event)">
 

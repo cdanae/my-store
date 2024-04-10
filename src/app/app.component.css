@@ -21,6 +21,7 @@
         }
     }
 }
+
 .message-error {
     background-color: red;
     color: white;
@@ -29,8 +30,18 @@
 
 }
 
-.message-error.active{
+.message-error.active {
     opacity: 1;
+}
+
+.line-error.valid {
+    height: 0;
+    border-bottom: 1px solid;
+    border-color: green;
+}
+
+.line-error.invalid {
+    border-color: red;
 }
 
 .styles {

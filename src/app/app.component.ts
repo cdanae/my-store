@@ -13,6 +13,11 @@ import { Product } from './product.model';
   age = 29;
   image = 'https://source.unsplash.com/random';
   btnDisabled = true;
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
   person = {
     name: 'Brisa',
     age: 31,
@@ -75,5 +80,9 @@ import { Product } from './product.model';
   }
   deleteEmojiBtn(index: number) {
     this.emojis.splice(index, 1)
+  }
+  onRegister() {
+    console.log(this.register);
+    
   }
 }
